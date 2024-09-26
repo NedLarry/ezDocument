@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net8.0": {}
+    "net8.0": {
+      "EzDocument.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/EzDocument.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EzDocument.Shared.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "EzDocument.Shared/1.0.0": {
+      "type": "project",
+      "path": "../EzDocument.Shared/EzDocument.Shared.csproj",
+      "msbuildProject": "../EzDocument.Shared/EzDocument.Shared.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net8.0": []
+    "net8.0": [
+      "EzDocument.Shared >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Chinedu\\.nuget\\packages\\": {},
@@ -39,7 +58,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Chinedu\\source\\repos\\EzDocument\\EzDocument.Shared\\EzDocument.Shared.csproj": {
+              "projectPath": "C:\\Users\\Chinedu\\source\\repos\\EzDocument\\EzDocument.Shared\\EzDocument.Shared.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
