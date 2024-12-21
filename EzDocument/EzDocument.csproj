@@ -8,6 +8,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EzDocument.Application\EzDocument.Application.csproj" />
     <ProjectReference Include="..\EzDocument.Shared\EzDocument.Shared.csproj" />
   </ItemGroup>
 
