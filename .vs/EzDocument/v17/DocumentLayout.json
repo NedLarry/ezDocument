@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\Chinedu Mbah\\source\\repos\\ezDocument\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BA457AF2-4A3B-4393-9357-1BAB22A97BAA}|EzDocument.Application\\EzDocument.Application.csproj|c:\\users\\chinedu mbah\\source\\repos\\ezdocument\\ezdocument.application\\ruleenforcer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BA457AF2-4A3B-4393-9357-1BAB22A97BAA}|EzDocument.Application\\EzDocument.Application.csproj|solutionrelative:ezdocument.application\\ruleenforcer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{ACA223E9-F432-41ED-83F3-0F466A5C0B0C}|EzDocument\\EzDocument.csproj|c:\\users\\chinedu mbah\\source\\repos\\ezdocument\\ezdocument\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ACA223E9-F432-41ED-83F3-0F466A5C0B0C}|EzDocument\\EzDocument.csproj|solutionrelative:ezdocument\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{BA457AF2-4A3B-4393-9357-1BAB22A97BAA}|EzDocument.Application\\EzDocument.Application.csproj|c:\\users\\chinedu mbah\\source\\repos\\ezdocument\\ezdocument.application\\ruleenforcer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA457AF2-4A3B-4393-9357-1BAB22A97BAA}|EzDocument.Application\\EzDocument.Application.csproj|solutionrelative:ezdocument.application\\ruleenforcer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA457AF2-4A3B-4393-9357-1BAB22A97BAA}|EzDocument.Application\\EzDocument.Application.csproj|c:\\users\\chinedu mbah\\source\\repos\\ezdocument\\ezdocument.application\\applicationmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA457AF2-4A3B-4393-9357-1BAB22A97BAA}|EzDocument.Application\\EzDocument.Application.csproj|solutionrelative:ezdocument.application\\applicationmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2005941-9F89-47A3-AFB9-B54B6FE35815}|EzDocument.Shared\\EzDocument.Shared.csproj|c:\\users\\chinedu mbah\\source\\repos\\ezdocument\\ezdocument.shared\\models\\documentationendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2005941-9F89-47A3-AFB9-B54B6FE35815}|EzDocument.Shared\\EzDocument.Shared.csproj|solutionrelative:ezdocument.shared\\models\\documentationendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA457AF2-4A3B-4393-9357-1BAB22A97BAA}|EzDocument.Application\\EzDocument.Application.csproj|c:\\users\\chinedu mbah\\source\\repos\\ezdocument\\ezdocument.application\\app.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA457AF2-4A3B-4393-9357-1BAB22A97BAA}|EzDocument.Application\\EzDocument.Application.csproj|solutionrelative:ezdocument.application\\app.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2005941-9F89-47A3-AFB9-B54B6FE35815}|EzDocument.Shared\\EzDocument.Shared.csproj|c:\\users\\chinedu mbah\\source\\repos\\ezdocument\\ezdocument.shared\\filehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -26,49 +34,75 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
+              "Title": "App.cs",
+              "DocumentMoniker": "C:\\Users\\Chinedu Mbah\\source\\repos\\ezDocument\\EzDocument.Application\\App.cs",
+              "RelativeDocumentMoniker": "EzDocument.Application\\App.cs",
+              "ToolTip": "C:\\Users\\Chinedu Mbah\\source\\repos\\ezDocument\\EzDocument.Application\\App.cs",
+              "RelativeToolTip": "EzDocument.Application\\App.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-23T07:53:48.197Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ApplicationMenu.cs",
+              "DocumentMoniker": "C:\\Users\\Chinedu Mbah\\source\\repos\\ezDocument\\EzDocument.Application\\ApplicationMenu.cs",
+              "RelativeDocumentMoniker": "EzDocument.Application\\ApplicationMenu.cs",
+              "ToolTip": "C:\\Users\\Chinedu Mbah\\source\\repos\\ezDocument\\EzDocument.Application\\ApplicationMenu.cs",
+              "RelativeToolTip": "EzDocument.Application\\ApplicationMenu.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-21T11:42:03.474Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "RuleEnforcer.cs",
               "DocumentMoniker": "C:\\Users\\Chinedu Mbah\\source\\repos\\ezDocument\\EzDocument.Application\\RuleEnforcer.cs",
               "RelativeDocumentMoniker": "EzDocument.Application\\RuleEnforcer.cs",
               "ToolTip": "C:\\Users\\Chinedu Mbah\\source\\repos\\ezDocument\\EzDocument.Application\\RuleEnforcer.cs",
               "RelativeToolTip": "EzDocument.Application\\RuleEnforcer.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAmwDMAAAAyAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAiwCYAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-21T10:11:24.271Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "DocumentationEndpoint.cs",
               "DocumentMoniker": "C:\\Users\\Chinedu Mbah\\source\\repos\\ezDocument\\EzDocument.Shared\\Models\\DocumentationEndpoint.cs",
               "RelativeDocumentMoniker": "EzDocument.Shared\\Models\\DocumentationEndpoint.cs",
               "ToolTip": "C:\\Users\\Chinedu Mbah\\source\\repos\\ezDocument\\EzDocument.Shared\\Models\\DocumentationEndpoint.cs",
               "RelativeToolTip": "EzDocument.Shared\\Models\\DocumentationEndpoint.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwBUAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-09T19:26:37.869Z"
+              "WhenOpened": "2024-11-09T19:26:37.869Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Chinedu Mbah\\source\\repos\\ezDocument\\EzDocument\\Program.cs",
               "RelativeDocumentMoniker": "EzDocument\\Program.cs",
               "ToolTip": "C:\\Users\\Chinedu Mbah\\source\\repos\\ezDocument\\EzDocument\\Program.cs",
               "RelativeToolTip": "EzDocument\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAjAAAA",
+              "ViewState": "AQIAADMAAAAA1szMzMwtwFcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-09T19:17:25.838Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "FileHandler.cs",
               "DocumentMoniker": "C:\\Users\\Chinedu Mbah\\source\\repos\\ezDocument\\EzDocument.Shared\\FileHandler.cs",
               "RelativeDocumentMoniker": "EzDocument.Shared\\FileHandler.cs",

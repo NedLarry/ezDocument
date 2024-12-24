@@ -10,7 +10,7 @@ namespace EzDocument.Application
     public static class RuleEnforcer
     {
 
-        static List<string> Actions = new List<string> { "get",  "post", "put", "patch", "options" };
+        static List<string> Actions = new List<string> { "get",  "post", "put", "patch" };
 
         static string JsonPattern = @"{[^}]+}";
 
@@ -34,6 +34,16 @@ namespace EzDocument.Application
                 return false;
 
             return true;
+        }
+
+        public static string EnpointActionMethod(string text)
+        {
+            var splittedText = text.Split(" ");
+
+            var action = splittedText[0];
+
+
+            return action;
         }
 
         public static bool RuleMatchJson(string text)

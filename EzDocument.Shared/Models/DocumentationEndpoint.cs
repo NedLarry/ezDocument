@@ -8,6 +8,8 @@ namespace EzDocument.Shared.Models
 {
     public class DocumentationEndpoint
     {
+        public string HttpAction { get; set; } = null!;
+
         public string EndpointUrl { get; set; } = null!;
 
         public string Description { get; set; } = string.Empty;
