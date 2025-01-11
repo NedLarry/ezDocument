@@ -2,16 +2,13 @@
 using EzDocument.Shared;
 using EzDocument.Shared.Models;
 using Newtonsoft.Json;
-using System.ComponentModel.DataAnnotations;
-using System.Linq.Expressions;
-using System.Text.Json.Serialization;
 
 Console.WriteLine("Tinkering...");
 
 Documentation documentation = new Documentation();
 documentation.Endpoints = new List<DocumentationEndpoint>();
 
-var endpoint = new DocumentationEndpoint();
+//var endpoint = new DocumentationEndpoint();
 
 var QueryParams = new Dictionary<string, string>();
 
@@ -24,12 +21,16 @@ string loopExistIndicator = string.Empty;
 
 Console.WriteLine("Kindly enter the Base url");
 documentation.BaseUrl = Console.ReadLine()!;
+Console.WriteLine();
+
 
 Console.WriteLine("Kindly enter the version");
 documentation.Version = Console.ReadLine()!;
+Console.WriteLine();
 
 Console.WriteLine("Kindly enter the description of the service");
 documentation.Description = Console.ReadLine()!;
+Console.WriteLine();
 
 
 //add endpoints
@@ -38,21 +39,23 @@ while (!loopExistIndicator.Equals("0"))
     Endpoint:
     Console.WriteLine("ADD NEW ENDPOINT...\nEnter 01 to Continue.\nEnter 00 to quit");
     var desc = Console.ReadLine()!;
+    Console.WriteLine();
 
     if (string.IsNullOrWhiteSpace(desc)) goto Endpoint;
 
     if (desc.Equals("00")) break;
 
+    var endpoint = new DocumentationEndpoint();
+
     Console.WriteLine("Kindly enter the description of the endpoint");
     endpoint.Description = Console.ReadLine()!;
+    Console.WriteLine();
 
     Console.WriteLine("Add endpoint path. " +
         "\nEnter in the format 'httpAction endpointPath' " +
         "\nGET /Users/Login");
-
-    //loopExistIndicator = Console.ReadLine()!;
-
     string endpointpath = Console.ReadLine()!;
+    Console.WriteLine();
 
     //validate 
     if (!RuleEnforcer.RuleMatchEndpointPath(endpointpath))
@@ -69,8 +72,9 @@ while (!loopExistIndicator.Equals("0"))
         case "get":
             AddQueryParam:
             Console.WriteLine("Add new query Param? 1. yes, 2. No");
-
             var addparamRes = Console.ReadLine();
+            Console.WriteLine();
+
             if (string.IsNullOrWhiteSpace(addparamRes)) goto AddQueryParam;
 
             if (addparamRes.Equals("1"))
@@ -84,21 +88,22 @@ while (!loopExistIndicator.Equals("0"))
 
                 QueryParams.Add(prop, propValue);
 
-                endpoint.Payload = QueryParams;
+                endpoint.QueryParams = QueryParams;
 
                 goto AddQueryParam;
             }
         break;
 
-        default:
+        case "post":
 
             payloadProp:
             Console.WriteLine(@"Enter payload in this format: { property:  value }");
             var endpointPayload = Console.ReadLine()!;
+            Console.WriteLine();
 
             if (!RuleEnforcer.RuleMatchJson(endpointPayload)) goto payloadProp;
 
-            RequestPayload = endpointPayload;
+            RequestPayload = JsonConvert.SerializeObject(endpointPayload);
 
             endpoint.Payload = RequestPayload;
         break;
@@ -109,6 +114,7 @@ while (!loopExistIndicator.Equals("0"))
     successPayloadProp:
     Console.WriteLine("Add sucess response payload.\n enter in the format '{property:value}' \nEnter 2 to skip)");
     var successPayload = Console.ReadLine()!;
+    Console.WriteLine();
 
     if (string.IsNullOrWhiteSpace(successPayload)) goto successPayloadProp;
 
@@ -117,13 +123,14 @@ while (!loopExistIndicator.Equals("0"))
 
     if (!RuleEnforcer.RuleMatchJson(successPayload)) goto successPayloadProp;
 
-    SuccessPayload = successPayload;
+    SuccessPayload = JsonConvert.SerializeObject(successPayload);
 
 
 
     ErrorPayloadProp:
     Console.WriteLine("Add error response payload\n enter in the format '{property:value}'. \nEnter 2 to skip)");
     var errorPayload = Console.ReadLine()!;
+    Console.WriteLine();
 
     if (string.IsNullOrWhiteSpace(errorPayload)) goto ErrorPayloadProp;
 
@@ -132,7 +139,7 @@ while (!loopExistIndicator.Equals("0"))
 
     if (!RuleEnforcer.RuleMatchJson(errorPayload)) goto ErrorPayloadProp;
 
-    ErrorPayload = errorPayload;
+    ErrorPayload = JsonConvert.SerializeObject(errorPayload);
 
     endpoint.SuccessResponsePayload = SuccessPayload;
     endpoint.ErrorResponsePayload = ErrorPayload;
@@ -141,5 +148,79 @@ while (!loopExistIndicator.Equals("0"))
     documentation.Endpoints.Add(endpoint);
 }
 
-
 Console.WriteLine($"Endpoint object: {JsonConvert.SerializeObject(documentation)}");
+Console.WriteLine();
+
+
+//TODO: Write object to file with proper formatting
+
+using (var textWriter = File.CreateText($"_v{new Random().Next(8)}.txt"))
+{
+    textWriter.WriteLine(DocumentWriter.WriteHeader($"BASEURL: {documentation.BaseUrl}", 3));
+
+    textWriter.WriteLine();
+    textWriter.WriteLine();
+
+    textWriter.WriteLine(DocumentWriter.WriteBold(DocumentWriter.WriteBlockQuote($"Description: {documentation.Description}")));
+
+    textWriter.WriteLine();
+    textWriter.WriteLine();
+
+
+    textWriter.WriteLine(DocumentWriter.WriteBold(DocumentWriter.WriteBlockQuote($"Version: {documentation.Version}")));
+
+    textWriter.WriteLine();
+    textWriter.WriteLine();
+
+    //endpoints
+
+    textWriter.WriteLine("-------ENDPOINTS-------");
+    textWriter.WriteLine();
+
+
+    foreach (var point in documentation.Endpoints)
+    {
+        textWriter.WriteLine($"{DocumentWriter.WriteBold("EndpointPath")}: {DocumentWriter.WriteCode(point.EndpointUrl.ToUpper())}");
+
+        textWriter.WriteLine();
+        textWriter.WriteLine();
+
+        textWriter.WriteLine($"{DocumentWriter.WriteBold("EndpointDescription")}: {DocumentWriter.WriteCode(point.Description)}");
+
+        textWriter.WriteLine();
+        textWriter.WriteLine();
+
+        //payload
+
+        if (point.HttpAction.ToLower().Equals("get"))
+        {
+            textWriter.WriteLine($"{DocumentWriter.WriteBold("QueryParam")}: {DocumentWriter.WriteCode(JsonConvert.SerializeObject(point.QueryParams))}");
+
+
+            textWriter.WriteLine();
+            textWriter.WriteLine();
+        }
+        else
+        {
+            textWriter.WriteLine($"{DocumentWriter.WriteBold("Payload")}: {DocumentWriter.WriteCode(JsonConvert.SerializeObject(point.Payload))}");
+
+            textWriter.WriteLine();
+            textWriter.WriteLine();
+        }
+
+
+        textWriter.WriteLine($"{DocumentWriter.WriteBold("SuccessReponse")}: {DocumentWriter.WriteCode(JsonConvert.SerializeObject(point.SuccessResponsePayload))}");
+
+
+        textWriter.WriteLine();
+        textWriter.WriteLine();
+
+        textWriter.WriteLine($"{DocumentWriter.WriteBold("ErrorResponse")}: {DocumentWriter.WriteCode(JsonConvert.SerializeObject(point.ErrorResponsePayload))}");
+
+        textWriter.WriteLine();
+        textWriter.WriteLine();
+    }
+
+}
+
+//TODO: SaveFile to desktop with predetermined name.

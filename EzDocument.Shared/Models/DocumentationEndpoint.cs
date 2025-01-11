@@ -16,6 +16,8 @@ namespace EzDocument.Shared.Models
 
         public object Payload { get; set; } = null!;
 
+        public object QueryParams { get; set; } = null!;
+
         public object SuccessResponsePayload { get; set; } = null!;
 
         public object ErrorResponsePayload { get; set; } = null!;

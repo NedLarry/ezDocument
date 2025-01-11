@@ -11,22 +11,22 @@ namespace EzDocument.Shared
     {
         public static string WriteItalics(string text)
         {
-            return $"{MarkdownCommands.ITALIC}{text}{MarkdownCommands.ITALIC}  ";
+            return $"{MarkdownCommands.ITALIC}{ text }{MarkdownCommands.ITALIC}  ";
         }
 
         public static string WriteBold(string text)
         {
-            return $"{MarkdownCommands.BOLD}{text}{MarkdownCommands.BOLD}  ";
+            return $"{MarkdownCommands.BOLD}{ text }{MarkdownCommands.BOLD}  ";
         }
 
         public static string WriteBlockQuote(string text)
         {
-            return $"{MarkdownCommands.BLOCKQUOTE} {text}  ";
+            return $"{MarkdownCommands.BLOCKQUOTE} { text }  ";
         }
 
         public static string WriteCode(string text)
         {
-            return $"{MarkdownCommands.CODE} {text} {MarkdownCommands.CODE}  ";
+            return $"{MarkdownCommands.CODE} { text } {MarkdownCommands.CODE}  ";
         }
 
         public static string WriteHeader(string text, int headerLevel)
@@ -38,7 +38,7 @@ namespace EzDocument.Shared
 
             var headers = new String (MarkdownCommands.CHAR_HEADER, headerLevel);
 
-            return $"{headers} {text}  ";
+            return $"{headers} { text }  ";
         }
     }
 }
