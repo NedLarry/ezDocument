@@ -1,0 +1,9 @@
+<h3>BASEURL: htpps://www.aac.eno/</h3>
+<p><strong>Description: for intending devs</strong>  </p>
+<p><strong>Version: 1.0</strong>  </p>
+<p>-------ENDPOINTS-------</p>
+<p><strong>EndpointPath</strong>  : <code>POST /MEMBERS/ADD/</code>  </p>
+<p><strong>EndpointDescription</strong>  : <code>for registering member</code>  </p>
+<p><strong>Payload</strong>  : <code>&quot;\&quot;{username: ada, email: ada@gmail.com, age: 28}\&quot;&quot;</code>  </p>
+<p><strong>SuccessReponse</strong>  : <code>&quot;\&quot;{code: 201, message: success, data: new {username: ada, id: 2, age: 28}}\&quot;&quot;</code>  </p>
+<p><strong>ErrorResponse</strong>  : <code>&quot;\&quot;{code: 400, message: Error adding user, data: new {username: ada, email: ada@gmail.com, age: 28}}\&quot;&quot;</code>  </p>

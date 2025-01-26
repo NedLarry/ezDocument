@@ -1,0 +1,26 @@
+### BASEURL: htpps://www.aac.eno/  
+
+
+**Description: for intending devs**  
+
+
+**Version: 1.0**  
+
+
+-------ENDPOINTS-------
+
+**EndpointPath**  : ``` POST /MEMBERS/ADD/ ```  
+
+
+**EndpointDescription**  : ``` for registering member ```  
+
+
+**Payload**  : ``` "\"{username: ada, email: ada@gmail.com, age: 28}\"" ```  
+
+
+**SuccessReponse**  : ``` "\"{code: 201, message: success, data: new {username: ada, id: 2, age: 28}}\"" ```  
+
+
+**ErrorResponse**  : ``` "\"{code: 400, message: Error adding user, data: new {username: ada, email: ada@gmail.com, age: 28}}\"" ```  
+
+

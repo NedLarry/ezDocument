@@ -1,0 +1,16 @@
+C:\Users\Chinedu Mbah\source\repos\ezDocument\EzDocument.Application\bin\Debug\net8.0\EzDocument.Application.deps.json
+C:\Users\Chinedu Mbah\source\repos\ezDocument\EzDocument.Application\bin\Debug\net8.0\EzDocument.Application.dll
+C:\Users\Chinedu Mbah\source\repos\ezDocument\EzDocument.Application\bin\Debug\net8.0\EzDocument.Application.pdb
+C:\Users\Chinedu Mbah\source\repos\ezDocument\EzDocument.Application\obj\Debug\net8.0\EzDocument.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Chinedu Mbah\source\repos\ezDocument\EzDocument.Application\obj\Debug\net8.0\EzDocument.Application.AssemblyInfoInputs.cache
+C:\Users\Chinedu Mbah\source\repos\ezDocument\EzDocument.Application\obj\Debug\net8.0\EzDocument.Application.AssemblyInfo.cs
+C:\Users\Chinedu Mbah\source\repos\ezDocument\EzDocument.Application\obj\Debug\net8.0\EzDocument.Application.csproj.CoreCompileInputs.cache
+C:\Users\Chinedu Mbah\source\repos\ezDocument\EzDocument.Application\obj\Debug\net8.0\EzDocument.Application.sourcelink.json
+C:\Users\Chinedu Mbah\source\repos\ezDocument\EzDocument.Application\obj\Debug\net8.0\EzDocument.Application.dll
+C:\Users\Chinedu Mbah\source\repos\ezDocument\EzDocument.Application\obj\Debug\net8.0\refint\EzDocument.Application.dll
+C:\Users\Chinedu Mbah\source\repos\ezDocument\EzDocument.Application\obj\Debug\net8.0\EzDocument.Application.pdb
+C:\Users\Chinedu Mbah\source\repos\ezDocument\EzDocument.Application\obj\Debug\net8.0\ref\EzDocument.Application.dll
+C:\Users\Chinedu Mbah\source\repos\ezDocument\EzDocument.Application\bin\Debug\net8.0\EzDocument.Shared.dll
+C:\Users\Chinedu Mbah\source\repos\ezDocument\EzDocument.Application\bin\Debug\net8.0\EzDocument.Shared.pdb
+C:\Users\Chinedu Mbah\source\repos\ezDocument\EzDocument.Application\obj\Debug\net8.0\EzDocument.Application.csproj.AssemblyReference.cache
+C:\Users\Chinedu Mbah\source\repos\ezDocument\EzDocument.Application\obj\Debug\net8.0\EzDocume.A1D75509.Up2Date

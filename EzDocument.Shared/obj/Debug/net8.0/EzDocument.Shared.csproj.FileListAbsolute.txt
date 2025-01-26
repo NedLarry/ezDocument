@@ -1,0 +1,13 @@
+C:\Users\Chinedu Mbah\source\repos\ezDocument\EzDocument.Shared\bin\Debug\net8.0\EzDocument.Shared.deps.json
+C:\Users\Chinedu Mbah\source\repos\ezDocument\EzDocument.Shared\bin\Debug\net8.0\EzDocument.Shared.dll
+C:\Users\Chinedu Mbah\source\repos\ezDocument\EzDocument.Shared\bin\Debug\net8.0\EzDocument.Shared.pdb
+C:\Users\Chinedu Mbah\source\repos\ezDocument\EzDocument.Shared\obj\Debug\net8.0\EzDocument.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Chinedu Mbah\source\repos\ezDocument\EzDocument.Shared\obj\Debug\net8.0\EzDocument.Shared.AssemblyInfoInputs.cache
+C:\Users\Chinedu Mbah\source\repos\ezDocument\EzDocument.Shared\obj\Debug\net8.0\EzDocument.Shared.AssemblyInfo.cs
+C:\Users\Chinedu Mbah\source\repos\ezDocument\EzDocument.Shared\obj\Debug\net8.0\EzDocument.Shared.csproj.CoreCompileInputs.cache
+C:\Users\Chinedu Mbah\source\repos\ezDocument\EzDocument.Shared\obj\Debug\net8.0\EzDocument.Shared.sourcelink.json
+C:\Users\Chinedu Mbah\source\repos\ezDocument\EzDocument.Shared\obj\Debug\net8.0\EzDocument.Shared.dll
+C:\Users\Chinedu Mbah\source\repos\ezDocument\EzDocument.Shared\obj\Debug\net8.0\refint\EzDocument.Shared.dll
+C:\Users\Chinedu Mbah\source\repos\ezDocument\EzDocument.Shared\obj\Debug\net8.0\EzDocument.Shared.pdb
+C:\Users\Chinedu Mbah\source\repos\ezDocument\EzDocument.Shared\obj\Debug\net8.0\ref\EzDocument.Shared.dll
+C:\Users\Chinedu Mbah\source\repos\ezDocument\EzDocument.Shared\obj\Debug\net8.0\EzDocument.Shared.csproj.AssemblyReference.cache
