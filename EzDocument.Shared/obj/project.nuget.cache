@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "vNIuYl0/OHnJmAnOc8hUVuIAHKr3aooYZ/c7DdbE1kns9+booHnwWbUaOkNrguFD5e4sKUm+BzrzC9ymPR92+A==",
+  "dgSpecHash": "LEURxFBHdN9gHhvk7eYy8lfby4r0ZFW+ofQjeXp308BHruUad9DZQomb7SnLP4aPx/QeA42COJ8PgkBcYhgJYQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Chinedu Mbah\\source\\repos\\ezDocument\\EzDocument.Shared\\EzDocument.Shared.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Chinedu Mbah\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

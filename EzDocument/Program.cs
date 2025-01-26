@@ -151,76 +151,19 @@ while (!loopExistIndicator.Equals("0"))
 Console.WriteLine($"Endpoint object: {JsonConvert.SerializeObject(documentation)}");
 Console.WriteLine();
 
-
 //TODO: Write object to file with proper formatting
-
-using (var textWriter = File.CreateText($"_v{new Random().Next(8)}.txt"))
-{
-    textWriter.WriteLine(DocumentWriter.WriteHeader($"BASEURL: {documentation.BaseUrl}", 3));
-
-    textWriter.WriteLine();
-    textWriter.WriteLine();
-
-    textWriter.WriteLine(DocumentWriter.WriteBold(DocumentWriter.WriteBlockQuote($"Description: {documentation.Description}")));
-
-    textWriter.WriteLine();
-    textWriter.WriteLine();
+var fileName = FileHandler.WriteEndpointObjectToFileAndReturnFileName(documentation);
 
 
-    textWriter.WriteLine(DocumentWriter.WriteBold(DocumentWriter.WriteBlockQuote($"Version: {documentation.Version}")));
+//TODO: Covert markdown to html
 
-    textWriter.WriteLine();
-    textWriter.WriteLine();
+var md = new MarkdownDeep.Markdown();
 
-    //endpoints
+md.ExtraMode = true;
+md.SafeMode = false;
 
-    textWriter.WriteLine("-------ENDPOINTS-------");
-    textWriter.WriteLine();
+var mkDContent = File.ReadAllText(fileName);
 
+string output = md.Transform(mkDContent);
 
-    foreach (var point in documentation.Endpoints)
-    {
-        textWriter.WriteLine($"{DocumentWriter.WriteBold("EndpointPath")}: {DocumentWriter.WriteCode(point.EndpointUrl.ToUpper())}");
-
-        textWriter.WriteLine();
-        textWriter.WriteLine();
-
-        textWriter.WriteLine($"{DocumentWriter.WriteBold("EndpointDescription")}: {DocumentWriter.WriteCode(point.Description)}");
-
-        textWriter.WriteLine();
-        textWriter.WriteLine();
-
-        //payload
-
-        if (point.HttpAction.ToLower().Equals("get"))
-        {
-            textWriter.WriteLine($"{DocumentWriter.WriteBold("QueryParam")}: {DocumentWriter.WriteCode(JsonConvert.SerializeObject(point.QueryParams))}");
-
-
-            textWriter.WriteLine();
-            textWriter.WriteLine();
-        }
-        else
-        {
-            textWriter.WriteLine($"{DocumentWriter.WriteBold("Payload")}: {DocumentWriter.WriteCode(JsonConvert.SerializeObject(point.Payload))}");
-
-            textWriter.WriteLine();
-            textWriter.WriteLine();
-        }
-
-
-        textWriter.WriteLine($"{DocumentWriter.WriteBold("SuccessReponse")}: {DocumentWriter.WriteCode(JsonConvert.SerializeObject(point.SuccessResponsePayload))}");
-
-
-        textWriter.WriteLine();
-        textWriter.WriteLine();
-
-        textWriter.WriteLine($"{DocumentWriter.WriteBold("ErrorResponse")}: {DocumentWriter.WriteCode(JsonConvert.SerializeObject(point.ErrorResponsePayload))}");
-
-        textWriter.WriteLine();
-        textWriter.WriteLine();
-    }
-
-}
-
-//TODO: SaveFile to desktop with predetermined name.
+FileHandler.SaveMarkup(output);

@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "ILRcqPhTEGl5CYaGZgapvpOZ0ag1pHXK4ypagwTgIWy1uzsiL0ztV3tBP0TvpZEcXZnwEZ6OOkoND93TEjSj+A==",
+  "dgSpecHash": "R7/IdW8ICY1LloMaX41dMB7LffLAwjT4bL0RfFe3uuFcNmuACIFJsBPDXUa3JPvAyqFERt2OvcaZZAno5lB8Ow==",
   "success": true,
   "projectFilePath": "C:\\Users\\Chinedu Mbah\\source\\repos\\ezDocument\\EzDocument.Application\\EzDocument.Application.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Chinedu Mbah\\.nuget\\packages\\markdowndeep.net.core\\1.5.0.4\\markdowndeep.net.core.1.5.0.4.nupkg.sha512",
+    "C:\\Users\\Chinedu Mbah\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }
