@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EzDocument.Shared")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+35f88726c4d4d2027cb3188cf4517287e6c90ab0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d6c16a7f167ce271b27008a40f87f90ffd86d77c")]
 [assembly: System.Reflection.AssemblyProductAttribute("EzDocument.Shared")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EzDocument.Shared")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
