@@ -5,15 +5,33 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <RootNamespace>EzDocument</RootNamespace>
+    <AssemblyName>EzDocument</AssemblyName>
+    <!-- Run on newer runtimes (e.g. a machine that only has .NET 9/10 installed). -->
+    <RollForward>Major</RollForward>
+    <!-- Ship only English compiler resources; keeps the package ~60% smaller. -->
+    <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+
+    <!-- NuGet / dotnet tool packaging -->
+    <PackAsTool>true</PackAsTool>
+    <ToolCommandName>ezdocument</ToolCommandName>
+    <PackageId>EzDocument.Tool</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>nedlarry</Authors>
+    <Description>A .NET tool that traverses an ASP.NET Core codebase and generates Markdown documentation for every endpoint (controllers and minimal APIs), showing which routes require a request body, route/query/header parameters or authorization. Output goes to a self-git-ignored folder.</Description>
+    <PackageTags>aspnetcore;documentation;markdown;api;endpoints;dotnet-tool</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageOutputPath>$(MSBuildThisFileDirectory)..\nupkg</PackageOutputPath>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.5.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\EzDocument.Application\EzDocument.Application.csproj" />
-    <ProjectReference Include="..\EzDocument.Shared\EzDocument.Shared.csproj" />
+    <None Include="..\README.md" Pack="true" PackagePath="\" />
+    <InternalsVisibleTo Include="EzDocument.Tests" />
   </ItemGroup>
 
 </Project>
